@@ -1,0 +1,110 @@
+/*把html和body的宽和高设置为100%;*/
+html,body{
+	height: 100%;
+	width: 100%;
+}
+/*给body设置相对定位,*/
+body{
+	position: relative;
+}
+
+.top-box{
+	height: 64px;
+	background-color: #88b6de;
+	line-height: 64px;
+}
+
+.top-box-logo{
+	text-align:center;
+}
+
+.top-box-exit{
+	color: #fff;
+	font-size: 16px;
+	overflow: hidden;
+	text-align:right;
+}
+
+.top-box-exit span:nth-child(1){
+	display: inline-block;
+	float: left;
+}
+
+.top-box-exit span:nth-child(3){
+	color: #000000;
+	display: inline-block;
+	line-height: 64px;
+	float: right;
+}
+/*正文部分样式开始*/
+/*左侧的固定手风琴菜单样式*/
+/*设置绝对定位,相对于它的父级,自绝父相,使用left为0px;top:64减去上面的固定高度;bottom为0px;把整个容器拉长,撑满父容器剩下的距离*/
+#main-content{
+	position: absolute;
+	width: 100%;
+	top:64px ;
+	left:0px;
+	bottom: 0px;
+
+}
+
+#main-content .row{
+	height: 100%;
+}
+.aside-menu{
+	padding: 0px;
+	background-color: #fff;
+	border: solid 1px gainsboro;
+	height: 100%;
+}
+
+.nav-stacked>li{
+	padding: 10px 5px;
+	overflow: hidden;
+}
+
+.nav-stacked>li a{
+	color: #333333;
+}
+
+.nav-stacked li span:nth-child(2){
+	float: right;
+}
+
+.nav-stacked>li>ul{
+	/*默认子菜单项,隐藏*/
+	list-style: none;
+	display: none;
+}
+
+.nav-stacked>li>ul>li{
+	padding: 10px 0px;
+}
+
+.list-nav{
+	height: 100%;
+	width:100%;
+}
+
+.nav-tabs{
+	border-bottom: none;
+}
+
+.nav-content{
+	border: solid 1px #DCDCDC;
+}
+
+.input-group{
+	padding-top: 3px;
+}
+/*右侧表格部分样式开始;*/
+.table-content{
+	margin-top: 30px;
+}
+/*分页样式*/
+.page-box{
+	text-align: right;
+}
+
+
+

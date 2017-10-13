@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<!--X-UA-Compatible是IE8的一个专有<meta>属性，它告诉IE8采用何种IE版本去渲染网页;-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>锦衣卫后台管理系统</title>
+		<!--jquery-->
+		<script src="dist/js/jquery.min.js"></script>
+		<!-- Bootstrap -->
+		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+		<!--引入自定义的样式文件-->
+		<link rel="stylesheet" type="text/css" href="dist/css/index.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<!--顶部的导航以及退出按钮-->
+			<div class="row">
+				<div class="col-md-12 top-box">
+					<!--盒子里面嵌套logo和右边的文字以及退出按钮部分-->
+					<div class="row">
+						<div class="col-md-2 top-box-logo">
+							<img src="images/logo.png" />
+						</div>
+						<div class="col-md-10 top-box-exit">
+							<span>锦衣卫后台管理系统</span>
+							<!--管理员图标，以及管理员姓名部分-->
+
+							<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 正文部分-->
+		<div class="container-fluid " id="main-content">
+			<div class="row">
+				<!--左侧的侧边栏部分手风琴菜单部分-->
+				<div class="col-md-2 aside-menu">
+					<!--菜单部分正文开始-->
+					<ul class="nav nav-pills nav-stacked" id="list-nav">
+						<li role="presentation"><span><a href="#">首页</a></span></li>
+						<li role="presentation"><span><a href="#">订单申请</a></span></li>
+						<li role="presentation"><span><a href="#">订单中心</a></span></li>
+						<li role="presentation"><span>客户中心</span><span class="glyphicon glyphicon-menu-down icon"  aria-hidden="true"></span>
+							<ul>
+								<li>
+									<a href="#">客户列表</a>
+								</li>
+								<li>
+									<a href="#">模型管理</a>
+								</li>
+							</ul>
+						</li>
+						<li role="presentation"><span><a href="#">预警中心</a></span></li>
+						<li role="presentation"><span>资产管理</span><span class="glyphicon glyphicon-menu-down icon"  aria-hidden="true"></span>
+							<ul>
+								<li>
+									<a href="#">资产列表</a>
+								</li>
+								<li>
+									<a href="#">资产处置</a>
+								</li>
+							</ul>
+						</li>
+						<li role="presentation"><span>系统管理</span><span class="glyphicon glyphicon-menu-down icon"  aria-hidden="true"></span>
+							<ul>
+								<li>
+									<a href="#">用户管理</a>
+								</li>
+								<li>
+									<a href="#">角色管理</a>
+								</li>
+								<li>
+									<a href="#">日志管理</a>
+								</li>
+							</ul>
+						</li>
+						<li role="presentation"><span><a href="#">客服中心</a></span></li>
+					</ul>
+				</div>
+				<!--右侧的正文部分-->
+				<div class="col-md-10 right-content">
+					<!--订单导航的部分-->
+					<div class="row nav-content">
+						<div class="col-md-8">
+							<ul class="nav nav-tabs">
+								<li role="presentation" class="active">
+									<a href="#">全部订单</a>
+								</li>
+								<li role="presentation">
+									<a href="#">申请中</a>
+								</li>
+								<li role="presentation">
+									<a href="#">已初审</a>
+								</li>
+								<li role="presentation">
+									<a href="#">已签约</a>
+								</li>
+								<li role="presentation">
+									<a href="#">已放款</a>
+								</li>
+								<li role="presentation">
+									<a href="#">已还贷</a>
+								</li>
+								<li role="presentation">
+									<a href="#" class="dropdown dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">问题订单
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li>
+											<a href="#">未通过订单</a>
+										</li>
+										<li>
+											<a href="#">风险订单</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<div class="input-group">
+								<input type="text" class="form-control" aria-label="...">
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">筛选 <span class="caret"></span></button>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li>
+											<a href="#">地区</a>
+										</li>
+										<li>
+											<a href="#">申请金额</a>
+										</li>
+										<li>
+											<a href="#">抵押资产</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--右侧正文表格部分样式开始-->
+					<div class="row">
+					  <div class="col-md-12 table-content">
+					  	<table class="table table-bordered">
+                        <thead>
+                        <tr><td><input type="checkbox"  aria-label="..." id="select-all"></td><td>订单号</td><td>借款人</td><td>抵押人</td>
+                        <td class="apply-money">
+                        <!--申贷金额的下拉菜单-->
+                        <div class="dropdown">
+						  <span class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						      申贷金额
+						    <span class="caret"></span>
+						  </span>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">100万</a></li>
+						    <li><a href="#">200万</a></li>
+						    <li><a href="#">300万</a></li>
+						  </ul>
+						</div>
+                        </td>
+                        	<td>抵押资产</td><td>订单日期</td><td>订单状态</td>
+                        	<td>渠道来源</td><td>当前负责人</td><td>地区</td><td>订单详情</td><td>操作</td>
+                        </tr>
+                        </thead>
+                        <tbody><tr><td><input type="checkbox" aria-label="..."></td><td>测试订单号</td><td>借款人</td><td>抵押人</td><td>申贷金额</td><td>抵押资产</td><td>订单日期</td><td>订单状态</td>
+                        	<td>渠道来源</td><td>当前负责人</td><td>地区</td><td>查看</td><td>操作</td>
+                        </tr>
+                        <tr><td><input type="checkbox" aria-label="..."></td><td>测试订单号</td><td>借款人</td><td>抵押人</td><td>申贷金额</td><td>抵押资产</td><td>订单日期</td><td>订单状态</td>
+                        	<td>渠道来源</td><td>当前负责人</td><td>地区</td><td>查看</td><td>操作</td>
+                        </tr></tbody>
+						</table>
+					  </div>
+					</div>
+					<!--表格分页部分开始-->
+					<div class="row">
+						<div class="col-md-6 col-md-offset-6">
+						<nav aria-label="Page navigation" class="page-box">
+						  <ul class="pagination">
+						    <li>
+						      <a href="#" aria-label="Previous">
+						        <span aria-hidden="true">&laquo;</span>
+						      </a>
+						    </li>
+						    <li><a href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						    <li><a href="#">5</a></li>
+						    <li>
+						      <a href="#" aria-label="Next">
+						        <span aria-hidden="true">&raquo;</span>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+						</div>
+					</div>
+					<!--表格分页部分结束-->
+				</div>
+			</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="dist/js/bootstrap.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!--引入自定义脚本文件-->
+		<script src="dist/js/index.js"></script>
+	</body>
+
+</html>
